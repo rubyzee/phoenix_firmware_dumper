@@ -1009,8 +1009,8 @@ rm -rf "${TMPDIR}" 2>/dev/null
 
 if [[ -s "${PROJECT_DIR}"/.github_token ]]; then
 	GITHUB_TOKEN=$(< "${PROJECT_DIR}"/.github_token)	# Write Your Github Token In a Text File
-	[[ -z "$(git config --get user.email)" ]] && git config user.email "DroidDumps@github.com"
-	[[ -z "$(git config --get user.name)" ]] && git config user.name "DroidDumps"
+	git config --global user.name "Egii"
+	git config --global user.email "regidesoftian@gmail.com"
 	if [[ -s "${PROJECT_DIR}"/.github_orgname ]]; then
 		GIT_ORG=$(< "${PROJECT_DIR}"/.github_orgname)	# Set Your Github Organization Name
 	else
@@ -1085,7 +1085,7 @@ if [[ -s "${PROJECT_DIR}"/.github_token ]]; then
 		if [[ -s "${PROJECT_DIR}"/.tg_chat ]]; then		# TG Channel ID
 			CHAT_ID=$(< "${PROJECT_DIR}"/.tg_chat)
 		else
-			CHAT_ID="@phoenix_droid_dumps"
+			CHAT_ID="@aliciadump"
 		fi
 		if [[ -s "${PROJECT_DIR}"/.tg_request_chat ]]; then		# TG Channel ID
 			CHAT_REQUEST_ID=$(< "${PROJECT_DIR}"/.tg_request_chat)
